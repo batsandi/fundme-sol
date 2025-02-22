@@ -10,11 +10,11 @@ library priceConverter {
     // function withdraw() public{}
 
     function getPrice() internal view returns (uint256){
-        // address 0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF
+        // address 0x6D41d1dc818112880b40e26BD6FD347E41008eDA
         // ABI
 
         AggregatorV3Interface priceFeed = AggregatorV3Interface(
-            0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF
+            0x6D41d1dc818112880b40e26BD6FD347E41008eDA
         );
         (,int256 answer,,,) = priceFeed.latestRoundData();
         return uint256(answer * 1e10);
